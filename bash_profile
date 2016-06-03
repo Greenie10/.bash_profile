@@ -7,7 +7,7 @@ export PATH=/usr/local/share/npm/bin:$PATH
 parse_git_branch() {
      git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/ (\1)/'
 }
-color="e[1;105;97m"
+
 # Colours
 # http://misc.flogisoft.com/bash/tip_colors_and_formatting
 export PS1='\n\e[1;105;97m \t \e[0;49;35m \u\e[1;34m@\e[0;35m\h\n\e[1;34m/\e[95m\W\e[34m/ $(parse_git_branch) :->\[\e[m\]  '
